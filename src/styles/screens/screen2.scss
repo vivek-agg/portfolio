@@ -1,0 +1,63 @@
+.screen2 {
+  min-height: 100%;
+  background-image: url('https://tvishnu.netlify.app/img/services-bg.jpg');
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .screen_content {
+    .screen_content-title {
+      color: $primary;
+    }
+  }
+}
+@media only screen and (min-width: 600px) {
+  .screen2 {
+    min-height: 100%;
+    background-image: url('https://tvishnu.netlify.app/img/services-bg.jpg');
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .screen_content {
+      position: absolute;
+      width: 100%;
+
+      .screen_content-title {
+        text-align: center;
+        font-size: 4rem;
+        font-weight: bold;
+        margin-top: 40px;
+      }
+      .screen_content-services {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'box1 box2 box3';
+        color: #fff;
+        margin: 50px 114px;
+        text-align: center;
+        grid-column-gap: 40px;
+
+        .screen_content-serviceType1 {
+          grid-area: box1;
+        }
+        .screen_content-serviceType2 {
+          grid-area: box2;
+        }
+        .screen_content-serviceType3 {
+          grid-area: box3;
+        }
+      }
+      .screen_content-serviceTypeTitle {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+}

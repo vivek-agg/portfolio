@@ -1,0 +1,73 @@
+.screen3 {
+  min-height: 100%;
+  position: relative;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 600px) {
+  .screen3 {
+    min-height: 100%;
+
+    .screen_content {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      grid-template-areas:
+        'box1 box4'
+        'box2 box4'
+        'box3 box4';
+      grid-column-gap: 2em;
+
+      .screen_content--about {
+        grid-area: box1;
+        margin: 0 0 1rem 0;
+        font-size: 3.75rem;
+        font-weight: 700;
+        line-height: 1;
+        margin: 0;
+      }
+      .screen_content--title {
+        grid-area: box2;
+        left: -1em;
+        width: calc(100% + 2em);
+        background: #f79c7d;
+        padding: 0.25em 1em;
+        font-size: 1.5rem;
+        /* margin-bottom: -2.5rem; */
+        position: relative;
+        grid-column: 1/-1;
+        grid-row: 2;
+        z-index: -1;
+        height: 40px;
+      }
+      .screen_content--subtitle {
+        grid-area: box3;
+        font-size: 18px;
+        p {
+          margin: 10px 0;
+        }
+      }
+      .screen_content--img {
+        grid-area: box4;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.screen4 {
+  min-height: 100%;
+  background-image: url('https://tvishnu.netlify.app/img/services-bg.jpg');
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
